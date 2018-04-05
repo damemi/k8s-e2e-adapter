@@ -160,7 +160,7 @@ func (p *E2EProvider) metricFor(value int64, groupResource schema.GroupResource,
 		},
 		MetricName: metricName,
 		Timestamp:  metav1.Time{time.Now()},
-		Value:      *resource.NewMilliQuantity(value*100, resource.DecimalSI),
+		Value:      *resource.NewMilliQuantity(value*1000, resource.DecimalSI),
 	}, nil
 }
 

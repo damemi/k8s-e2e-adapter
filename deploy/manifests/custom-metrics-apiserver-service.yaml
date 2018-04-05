@@ -5,7 +5,11 @@ metadata:
   namespace: custom-metrics
 spec:
   ports:
-  - port: 443
+  - name: https
+    port: 443
     targetPort: 6443
+  - name: http
+    port: 80
+    targetPort: 8080
   selector:
     app: custom-metrics-apiserver
